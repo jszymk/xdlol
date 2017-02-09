@@ -1,0 +1,70 @@
+<html><head>
+<title>warun xD</title>
+<script language="javascript" type="text/javascript">
+var posLeft;
+var posTop;
+var colour=new Array("blue","yellow","lime","magenta","aqua","green","orange","crimson","royalblue","hotpink","indigo","dodgerblue","chartreuse","skyblue","red");
+var backi=0;
+var colouri=1;
+var standard = document.title;
+var totalC = standard.length;
+
+function repeat(){
+
+	backi=backi+1;
+if(backi>=colour.length){
+	backi=0;
+}
+
+	colouri=colouri+1;
+if(colouri>=colour.length){
+	colouri=0;
+}
+	document.body.style.backgroundColor = colour[backi];
+	document.body.style.color = colour[colouri];
+	
+	var fnt = Math.round(Math.random()*250);
+	document.getElementById("cent").style.fontSize = fnt+50;
+	
+	standard = standard.substr(1,totalC)+standard.substr(0,1);
+	document.title=standard;
+
+t=setTimeout('repeat()', 50);
+
+}
+
+function jp2gmd(id){
+	var posLeft = Math.random()*100;
+	var posTop = Math.random()*100;
+	document.getElementById(id).style.left = posLeft + '%';
+	document.getElementById(id).style.top = posTop + '%';
+	t=setTimeout('jp2gmd(\"'+id+'\")', 50);
+}
+var posbor = 0;
+function borewicz(){
+	posbor += 5;
+	if(posbor >= 120) posbor = -20;
+	document.getElementById("third").style.left = posbor + '%';
+	t=setTimeout('borewicz()', 50);
+}
+
+</script>
+</head>
+<body style="color: dodgerblue; background: indigo none repeat scroll 0% 0%; font-size: 300px; overflow: hidden;" onload="repeat()">
+
+<script>
+new Audio('https://dl.dropboxusercontent.com/s/nlwdyy5f6fb75bc/impra.mp3').play();
+</script>
+
+<div id="first" style="position:absolute; left:300px; top:300px; width:500px; height:300px; font-size:100px">warun xD</div>
+<div id="second" style="position:absolute; left:300px; top:300px; width:500px; height:300px; font-size:100px">warun xD</div>
+<center><div id="cent">warun xD</div></center>
+<div id="third" style="position:absolute; left:300px; top:500px; width:500px; height:300px; font-size:200px">grubasie</div>
+
+<script>
+jp2gmd("first");
+jp2gmd("second");
+borewicz();
+</script>
+
+</body></html>
