@@ -1,5 +1,5 @@
 <html><head>
-<title>warun xD</title>
+<title>warun xD </title>
 <script language="javascript" type="text/javascript">
 var posLeft;
 var posTop;
@@ -44,8 +44,11 @@ var posbor = 0;
 function borewicz(){
 	posbor += 5;
 	if(posbor >= 120) posbor = -20;
-	document.getElementById("third").style.left = posbor + '%';
+	document.getElementById("third").style.left = (100-posbor) + '%';
 	t=setTimeout('borewicz()', 50);
+	
+	document.getElementById("rotated").style.left = posbor + '%';
+	document.getElementById("rotated").style.top = posbor + '%';
 }
 
 </script>
@@ -59,7 +62,8 @@ new Audio('https://dl.dropboxusercontent.com/s/nlwdyy5f6fb75bc/impra.mp3').play(
 <div id="first" style="position:absolute; left:300px; top:300px; width:500px; height:300px; font-size:100px">warun xD</div>
 <div id="second" style="position:absolute; left:300px; top:300px; width:500px; height:300px; font-size:100px">warun xD</div>
 <center><div id="cent">warun xD</div></center>
-<div id="third" style="position:absolute; left:300px; top:500px; width:500px; height:300px; font-size:200px">grubasie</div>
+<div id="rotated" style="position:absolute; left:300px; top:500px; width:500px; height:300px; font-size:200px">grubasie</div>
+<div id="third" style="position:absolute; left:300px; top:500px; width:1000px; height:300px; font-size:150px">ucz sie kurwo</div>
 
 <script>
 jp2gmd("first");
@@ -67,4 +71,15 @@ jp2gmd("second");
 borewicz();
 </script>
 
-</body></html>
+</body>
+
+<style>
+
+#rotated {
+	position:absolute;
+	transform: rotate(20deg);
+	font-size:200px;
+}
+
+</style>
+</html>
