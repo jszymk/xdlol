@@ -1,0 +1,71 @@
+<html lang="pl"><head>
+<meta charset="UTF-8"/>
+<title>lista lewaków 2017</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style style="text/css">
+div.scrolling-limit{
+  width: 100px;
+  height: 20px;
+  color: white;
+  background-color: blue;
+  overflow:hidden;
+  white-space:nowrap;
+  display:inline-block;
+}
+
+div.scrolling{
+  position: relative;
+  -webkit-animation: scroll 3s infinite linear;;
+  -moz-animation: scroll 3s infinite linear;
+  -o-animation: scroll 3s infinite linear;
+  animation: scroll 3s infinite linear;
+}
+
+@keyframes scroll{
+    0%   {left: 0px;}
+    100% {left: -72px;}
+}
+@-webkit-keyframes scroll{
+    0%   {left: 0px;}
+    100% {left: -72px;}
+}
+
+.spoiler {  
+    background: #000 !important;  
+    color: #000 !important  
+}  
+.spoiler:hover {  
+    color: #FFF !important  
+}  
+</style>
+</head>
+<body>
+<div>1. Bartek Wiśniewski</div>
+<div>2. <s>polski śmieć</s> Wojciech Okonek</div>
+<div>3. <div class="scrolling-limit"><div class="scrolling">USA  <span style="color:red;"> USA </span>  USA  <span style="color:red;"> USA </span>  USA  <span style="color:red;"> USA </span></div></div> Sebastian Orwat <div class="scrolling-limit"><div class="scrolling"><span style="color:red;">USA</span>  USA  <span style="color:red;">USA</span>  USA  <span style="color:red;">USA</span>  USA</div></div>
+<div>4. Natalia Łukasiewicz</div>
+<div id="epilepsja">5. Janusz Szymkowiak</div>
+<div>6. Bartosz Osipiuk</div>
+<div>7. Mateusz Lamecki</div>
+<div>8. Mikołaj Nogalski</div>
+<div>9. Wiktor Pilak <span class="spoiler">tu jest wszystko źle panie Pilak xD</span></div>
+<div>10. Wojciech Stanisław Sipak</div>
+<div>11. Marianna Murawicz</div>
+<div>12. Weronika Orczyk</div>
+<div>13. Bartosz Łosiewicz</div>
+<div>14. Krystian Nowakowski <---- chodzi na PR :-))))))</div>
+</body>
+<script language="javascript" type="text/javascript">
+var colour=new Array("blue","yellow","lime","magenta","aqua","green","orange","crimson","royalblue","hotpink","indigo","dodgerblue","chartreuse","skyblue","red");
+var colouri = 0;
+function repeat(){
+	colouri=colouri+1;
+	if(colouri>=colour.length){
+		colouri=0;
+	}
+	document.getElementById("epilepsja").style.color = colour[colouri];
+	
+	t=setTimeout('repeat()', 50);
+}
+repeat();
+</script>
