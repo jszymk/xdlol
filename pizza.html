@@ -9,15 +9,28 @@
 			deg += 1
 			t=setTimeout('jp2gmd(\"'+id+'\")', 50);
 		}
+		function zamawiam() {
+			new Audio('crankit.mp3').play();
+			document.getElementById('bauzadiv').hidden = false
+			document.getElementById('zamawiam').hidden = true
+			setTimeout('jp2gmd(\'bauza\')', 2400);
+		}
 	</script>
   </head>
   <body>
-	<div style="width: 100%; height: 100vh">
+	<div style="width: 100%; height: 100vh; text-align: center" id="zamawiam">
+		<div style="height:100vh; top:50%; position:absolute; text-align: center; width:100%; font-weight:bold">
+			picka 50cm ser salami cebula prażona jalapeno sos w kurwę ostry
+			<div>
+				<button onclick="zamawiam()" style="margin-top:10px">
+					zamawiam
+				</button>
+			</div>
+		</div>
+	</div>
+	<div style="width: 100%; height: 100vh" hidden="true" id="bauzadiv">
 		<img style="width: 100%; height: 100vh" src="bauza.jpg" id="bauza"/>
 	</div>
-	<script>
-		jp2gmd('bauza')
-	</script>
   </body>
   
 </html>
