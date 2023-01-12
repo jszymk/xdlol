@@ -10,10 +10,13 @@
 			t=setTimeout('jp2gmd(\"'+id+'\")', 50);
 		}
 		function zamawiam() {
-			new Audio('crankit.mp3').play();
+			a=new Audio('crankit.mp3')
+			a.addEventListener("canplaythrough", (event) => {
+				a.play();
+				setTimeout('jp2gmd(\'bauza\')', 2400);
+			});
 			document.getElementById('bauzadiv').hidden = false
 			document.getElementById('zamawiam').hidden = true
-			setTimeout('jp2gmd(\'bauza\')', 2400);
 		}
 	</script>
   </head>
